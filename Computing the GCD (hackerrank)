@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static int gcd(int A,int B){
+        if(B==0){
+            return A;
+        }
+        while(A%B!=0)
+        {
+            int temp = B;
+        
+            B= A%temp;
+            A = temp;
+        }
+        return B;
+    }
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        
+          System.out.println(gcd(A,B));      
+
+    }
+}
